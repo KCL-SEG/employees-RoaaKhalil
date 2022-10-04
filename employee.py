@@ -1,9 +1,9 @@
 """Employee pay calculator."""
-"""ENTER YOUR SOLUTION HERE!"""
 
 class Employee:
-    def __init__(self, name):
+    def __init__(self, name, hours):
         self.name = name
+        self.hours = hours
 
     def get_pay(self):
         pass
