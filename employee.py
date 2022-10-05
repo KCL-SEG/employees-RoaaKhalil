@@ -1,7 +1,7 @@
 """Employee pay calculator."""
 
 class Employee:
-    def __init__(self, name, contract, salaryCal , hours = 0, isCommission = False, commissionType = null, commission = 0, contracts = 0):
+    def __init__(self, name, contract, salaryCal , hours = 0, isCommission = False, commissionType = "", commission = 0, contracts = 0):
         self.name = name
         self.contract = contract
         self.salaryCal = salaryCal
