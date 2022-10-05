@@ -28,7 +28,7 @@ class Employee:
 
         elif self.contract == "hourly":
             if self.isCommission == False:
-                totalPay = sself.alaryCal * self.hours
+                totalPay = self.salaryCal * self.hours
 
             elif self.isCommission and self.commissionType == "bonus":
                 totalPay = (self.salaryCal * self.hours) + self.commission
