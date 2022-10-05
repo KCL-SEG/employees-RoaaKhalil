@@ -11,25 +11,27 @@ class Employee:
     def get_pay(self):
         totalPay = 0
 
-        if contract == "monthly":
-            if commission == False:
-                totalPay = salaryCal
+        if self.contract == "monthly":
+            if self.commission == False:
+                totalPay = self.salaryCal
 
-            elif commission & commissionType == "bonus":
+            elif self.commission & cself.ommissionType == "bonus":
                 totalPay = salaryCal + commission
 
             else:
-                totalPay = salaryCal +  (contracts * commission)
+                totalPay = self.salaryCal +  (self.contracts * self.commission)
 
-        elif contract == "hourly":
-            if commission == False:
-                totalPay = salaryCal * hours
+        elif self.contract == "hourly":
+            if self.commission == False:
+                totalPay = sself.alaryCal * self.hours
 
-            elif commission & commissionType == "bonus":
-                totalPay = (salaryCal * hours) + commission
+            elif self.commission & cself.ommissionType == "bonus":
+                totalPay = (self.salaryCal * self.hours) + self.commission
 
             else:
-                totalPay = (salaryCal * hours) +  (contracts * commission)
+                totalPay = (self.salaryCal * self.hours) +  (self.contracts * self.commission)
+                
+        return totalPay
 
 
 
