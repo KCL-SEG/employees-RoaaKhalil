@@ -51,10 +51,10 @@ class Employee:
                 empString =  empString + " works on a monthly salary of "  + str(self.salaryCal) + ". Their total pay is " + str(get_pay()) + "."
 
             elif self.isCommission and self.commissionType == "bonus":
-                empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a bonous commission of " + str(self.commission) + ". Their total pay is " + str(get_pay()) + "."
+                empString =  empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a bonous commission of " + str(self.commission) + ". Their total pay is " + str(get_pay()) + "."
 
             else:
-                empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract. Their total pay is " + str(get_pay()) + "."
+                empString= empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract. Their total pay is " + str(get_pay()) + "."
 
         elif self.contract == "hourly":
             if self.isCommission == False:
