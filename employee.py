@@ -1,7 +1,7 @@
 """Employee pay calculator."""
 
 class Employee:
-    def __init__(self, name, contract, salaryCal , hours = 0, isCommission = False, commissionType = "", commission = 0, contractsNum = 0):
+    def __init__(self, name, contract, salaryCal , hours, isCommission , commissionType , commission , contractsNum ):
         self.name = name
         self.contract = contract
         self.salaryCal = salaryCal
@@ -20,7 +20,7 @@ class Employee:
             if self.isCommission == False:
                 totalPay = self.salaryCal
 
-            elif self.isCommission & self.commissionType == "bonus":
+            elif self.isCommission and self.commissionType == "bonus":
                 totalPay = self.salaryCal + self.commission
 
             else:
@@ -30,7 +30,7 @@ class Employee:
             if self.isCommission == False:
                 totalPay = sself.alaryCal * self.hours
 
-            elif self.isCommission & self.commissionType == "bonus":
+            elif self.isCommission and self.commissionType == "bonus":
                 totalPay = (self.salaryCal * self.hours) + self.commission
 
             else:
@@ -48,19 +48,19 @@ class Employee:
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
-billie = Employee('Billie', "monthly", 4000)
+billie = Employee('Billie', "monthly", 4000, 0, False, "None", 0, 0)
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
-charlie = Employee('Charlie', 'hourly', 25, 100)
+charlie = Employee('Charlie', 'hourly', 25, 100, False, "None", 0, 0)
 
 # Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
-renee = Employee('Renee', 'monthly', 3000, True, 'contract', 200, 4)
+renee = Employee('Renee', 'monthly', 3000, 0, True, 'contract', 200, 4)
 
 # Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
 jan = Employee('Jan', 'hourly', 25, 150, True, "contract", 220, 3)
 
 # Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
-robbie = Employee('Robbie', 'monthly', 2000, True, "bonus", 1500)
+robbie = Employee('Robbie', 'monthly', 2000, 0, True, "bonus", 1500,0)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel', 'hourly', 30, 120, True, "bonus", 600)
+ariel = Employee('Ariel', 'hourly', 30, 120, True, "bonus", 600, 0)
