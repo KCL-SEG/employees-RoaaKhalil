@@ -1,10 +1,15 @@
 """Employee pay calculator."""
 
 class Employee:
-    def __init__(self, name, contract, salaryCal , hours = 0, isCommission = False, commissionType = "", commission = 0, contracts = 0):
+    def __init__(self, name, contract, salaryCal , hours = 0, isCommission = False, commissionType = "", commission = 0, contractsNum = 0):
         self.name = name
         self.contract = contract
         self.salaryCal = salaryCal
+        self.hours = hours
+        self.isCommission = isCommission
+        self.commissionType = commissionType
+        self.commission = commission
+        self.contractsNum = contractsNum
         
         
 
@@ -12,25 +17,25 @@ class Employee:
         totalPay = 0
 
         if self.contract == "monthly":
-            if self.commission == False:
+            if self.isCommission == False:
                 totalPay = self.salaryCal
 
-            elif self.commission & cself.ommissionType == "bonus":
-                totalPay = salaryCal + commission
+            elif self.isCommission & self.commissionType == "bonus":
+                totalPay = self.salaryCal + self.commission
 
             else:
-                totalPay = self.salaryCal +  (self.contracts * self.commission)
+                totalPay = self.salaryCal +  (self.contractsNum * self.commission)
 
         elif self.contract == "hourly":
-            if self.commission == False:
+            if self.isCommission == False:
                 totalPay = sself.alaryCal * self.hours
 
-            elif self.commission & cself.ommissionType == "bonus":
+            elif self.isCommission & self.commissionType == "bonus":
                 totalPay = (self.salaryCal * self.hours) + self.commission
 
             else:
-                totalPay = (self.salaryCal * self.hours) +  (self.contracts * self.commission)
-                
+                totalPay = (self.salaryCal * self.hours) +  (self.contractsNum * self.commission)
+
         return totalPay
 
 
