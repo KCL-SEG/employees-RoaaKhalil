@@ -48,23 +48,23 @@ class Employee:
         
         if self.contract == "monthly":
             if self.isCommission == False:
-                empString =  empString + " works on a monthly salary of "  + str(self.salaryCal) + ". /s+Their total pay is " + str(get_pay()) + "."
+                empString =  empString + " works on a monthly salary of "  + str(self.salaryCal) + ".  Their total pay is " + str(get_pay()) + "."
 
             elif self.isCommission and self.commissionType == "bonus":
-                empString =  empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a bonous commission of " + str(self.commission) + ". /s+Their total pay is " + str(get_pay()) + "."
+                empString =  empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a bonous commission of " + str(self.commission) + ".  Their total pay is " + str(get_pay()) + "."
 
             else:
-                empString= empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract. /s+Their total pay is " + str(get_pay()) + "."
+                empString= empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract.  Their total pay is " + str(get_pay()) + "."
 
         elif self.contract == "hourly":
             if self.isCommission == False:
-                empString =  empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours." + "/s+Their total pay is " + str(get_pay()) + "."
+                empString =  empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours." + " Their total pay is " + str(get_pay()) + "."
 
             elif self.isCommission and self.commissionType == "bonus":
-                empString = empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours and receives a bonous commission of " + str(self.commission) + ". /s+Their total pay is " + str(get_pay()) + "."
+                empString = empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours and receives a bonous commission of " + str(self.commission) + ".  Their total pay is " + str(get_pay()) + "."
 
             else:
-               empString =  empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract. /s+Their total pay is " + str(get_pay()) + "."
+               empString =  empString + " works on a contract of "  + str(self.salaryCal) + "hours at " + str(self.hours)+ "/hours and receives a commission for " + str(self.contractsNum) + " contract(s) at" str(self.commission)+ "/contract.  Their total pay is " + str(get_pay()) + "."
         
         return empString
 
