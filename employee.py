@@ -46,7 +46,7 @@ class Employee:
     def __str__(self):
         empString = self.name 
         
-                if self.contract == "monthly":
+        if self.contract == "monthly":
             if self.isCommission == False:
                 empString =  empString + " works on a monthly salary of "  + str(self.salaryCal) + ". Their total pay is " + str(self.get_pay()) + "."
 
