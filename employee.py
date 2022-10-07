@@ -65,7 +65,7 @@ class Employee:
                 empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour and receives a bonus commission of {self.commission}.  Their total pay is {self.get_pay()}.'
 
             else:
-               empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour and receives a commission for{self.contractsNum} contract(s) at {self.commission}/contract.  Their total pay is {self.get_pay()}.'                
+               empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour and receives a commission for {self.contractsNum} contract(s) at {self.commission}/contract.  Their total pay is {self.get_pay()}.'                
         
         return empString
 
