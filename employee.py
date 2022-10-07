@@ -44,27 +44,28 @@ class Employee:
 
 
     def __str__(self):
-        empString = self.name 
+        empString = ""
         
         if self.contract == "monthly":
             if self.isCommission == False:
-                empString =  empString + " works on a monthly salary of "  + str(self.salaryCal) + ". Their total pay is " + str(self.get_pay()) + "."
+                empString += f'{self.name} works on a monthly salary of {self.salaryCal}.  Their total pay is {self.get_pay()}.'
 
             elif self.isCommission and self.commissionType == "bonus":
-                empString =  empString + " works on a monthly salary of " + str(self.salaryCal)+ " and receives a bonus commission of " + str(self.commission) + ". Their total pay is " + str(self.get_pay()) + "."
+                empString += f'{self.name} works on a monthly salary of {self.salaryCal} and receives a bonus commission of {self.commission}.  Their total pay is {self.get_pay()}.'
 
             else:
-                empString= empString + " works on a monthly salary of " + str(self.salaryCal) + " and receives a commission for " + str(self.contractsNum) + " contract(s) at " + str(self.commission)+ "/contract. Their total pay is " + str(self.get_pay()) + "."
+                empString += f'{self.name} works on a monthly salary of {self.salaryCal} and receives a commission for {self.contractsNum} contract(s) at {self.commission}/contract.  Their total pay is {self.get_pay()}.'
+
 
         elif self.contract == "hourly":
             if self.isCommission == False:
-                empString =  empString + " works on a contract of "  + str(self.salaryCal) + " hours at " + str(self.hours)+ "/hours." + " Their total pay is " + str(self.get_pay()) + "."
+                empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour.  Their total pay is {self.get_pay()}.'
 
             elif self.isCommission and self.commissionType == "bonus":
-                empString = empString + " works on a contract of "  + str(self.salaryCal) + " hours at " + str(self.hours)+ "/hours and receives a bonus commission of " + str(self.commission) + ". Their total pay is " + str(self.get_pay()) + "."
+                empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour and receives a bonus commission of {self.commission}.  Their total pay is {self.get_pay()}.'
 
             else:
-               empString =  empString + " works on a contract of "  + str(self.salaryCal) + " hours at " + str(self.hours)+ "/hours and receives a commission for " + str(self.contractsNum) + " contract(s) at " + str(self.commission)+ "/contract. Their total pay is " + str(self.get_pay()) + "."
+               empString += f'{self.name} works on a contract of {self.salaryCal} hours at {self.hours}/hour and receives a commission for{self.contractsNum} contract(s) at {self.commission}/contract.  Their total pay is {self.get_pay()}.'                
         
         return empString
 
